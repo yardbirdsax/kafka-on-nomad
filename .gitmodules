@@ -1,0 +1,3 @@
+[submodule "nomad-lab/aws"]
+	path = nomad-lab/aws
+	url = https://github.com/hashicorp/terraform-aws-nomad
