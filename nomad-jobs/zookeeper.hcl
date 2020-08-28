@@ -5,7 +5,7 @@ job "zookeeper" {
   type = "service"
 
   update {
-    stagger = "1m"
+    stagger = "5s"
     max_parallel = 1
   }
 
@@ -18,11 +18,30 @@ job "zookeeper" {
       value     = 1
     }
 
+    service {
+      name = "zookeeper"
+      check {
+        type = "tcp"
+        port = "zk"
+        interval = "10s"
+        timeout = "1s"
+      }
+    }
+
+    network {
+      port "zk" {
+        static = 2181
+      }
+    }
+
     task "zookeeper" {
       driver = "docker"
 
       config {
         image = "zookeeper:3.6.1"
+        ports = [
+          "zk"
+        ]
       }
 
 
