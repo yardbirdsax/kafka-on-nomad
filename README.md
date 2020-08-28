@@ -4,7 +4,7 @@ This repository is my record of an attempt to get a secured Apache Kafka cluster
 
 ## Pre-Requisites
 
-1. Install [Terraform](https://terraform.io), [Nomad](https://nomadproject.io), and [Consul](https://consul.io). Note that for Nomad and Consul you need only install the binaries, not set up servers.
+1. Install [Terraform](https://terraform.io), [Packer](https://packer.io), [Nomad](https://nomadproject.io), and [Consul](https://consul.io). Note that for Nomad and Consul you need only install the binaries, not set up servers.
 
 ## Creating a Nomad lab cluster
 
